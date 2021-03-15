@@ -1,2 +1,2 @@
 modules:
-  {{ blackbox_exporter_configuration_modules | to_nice_yaml(indent=2) | indent(2,False) }}
+  {{ blackbox_exporter_configuration_modules | to_json | from_json | to_nice_yaml(indent=2) | indent(2,False) }}
